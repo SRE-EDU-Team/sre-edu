@@ -1,0 +1,80 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #4338ca;
+  --ifm-color-primary-dark: #3730a3;
+  --ifm-color-primary-darker: #312e81;
+  --ifm-color-primary-darkest: #1e1b4b;
+  --ifm-color-primary-light: #4f46e5;
+  --ifm-color-primary-lighter: #6366f1;
+  --ifm-color-primary-lightest: #818cf8;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #6366f1;
+  --ifm-color-primary-dark:  #818cf8;
+  --ifm-color-primary-darker: #a5b4fc;
+  --ifm-color-primary-darkest: #c7d2fe;
+  --ifm-color-primary-light: #4f46e5;
+  --ifm-color-primary-lighter: #4338ca;
+  --ifm-color-primary-lightest: #3730a3;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown {
+    @apply prose;
+}
+
+[data-theme='dark'] .markdown {
+    @apply prose-invert;
+}
+
+a {
+    color: var(--ifm-link-color);
+    text-decoration: var(--ifm-link-decoration);
+    transition: color var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+a svg {
+    @apply inline;
+}
+
+.menu {
+    @apply overflow-x-visible;
+}
+
+nav.menu {
+    @apply p-2 overflow-y-auto;
+}
+
+.navbar-sidebar__item.menu {
+    @apply flex flex-col;
+}
+
+nav.menu li:not(:first-child) {
+    @apply mt-1;
+}
+
+ul.menu__list {
+    @apply overflow-y-auto;
+}
+
+nav.menu li a, ul.menu__list a {
+    @apply p-4 truncate;
+}
+
+button.navbar-sidebar__back {
+    @apply m-0 p-4 pl-0 truncate w-full;
+}
