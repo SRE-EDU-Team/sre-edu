@@ -74,7 +74,7 @@ ul.menu__list {
 
 nav.menu li a,
 ul.menu__list a {
-  @apply p-4 truncate;
+  @apply p-4 truncate block;
 }
 
 button.navbar-sidebar__back {
