@@ -16,7 +16,8 @@ function HomepageHeader (): ReactElement {
                 </div>
             </div>
             <div className={'prose dark:prose-invert p-2'}>
-                <Link to={'/docs/lections'}>{'Лекции'}</Link>
+                <Link to={'/docs/lections'}>{'Лекции'}</Link><br/>
+                <Link to={'/pages/slides/01 Введение'}>{'X'}</Link>
             </div>
         </div>
     )

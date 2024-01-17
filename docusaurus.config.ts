@@ -40,7 +40,11 @@ const config: Config = {
                 //     showReadingTime: true
                 // },
                 theme: {
-                    customCss: './src/css/custom.css'
+                    customCss: [
+                        './src/css/main.css',
+                        './src/css/reveal.css',
+                        './src/css/reveal-theme.css'
+                    ]
                 }
             } satisfies Preset.Options
         ]

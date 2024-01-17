@@ -33,6 +33,8 @@
     "@docusaurus/tsconfig": "3.1.0",
     "@docusaurus/types": "3.1.0",
     "@tailwindcss/typography": "^0.5.10",
+    "@types/reveal": "^4.2.0",
+    "@types/reveal.js": "^4.4.8",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "eslint": "^8.56.0",
     "eslint-config-standard-with-typescript": "^43.0.0",
