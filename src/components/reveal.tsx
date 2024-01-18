@@ -24,7 +24,6 @@ interface BulletsSlideProps {
 
 export function BulletsSlide ({ title, children }: PropsWithChildren<BulletsSlideProps>): ReactElement {
     return <TitleSlide title={title}>
-        <h1 className='text-6xl text-amber-600'>{title}</h1>
         <ul className='text-3xl text-left mx-auto w-fit list-disc'>
             {children}
         </ul>
