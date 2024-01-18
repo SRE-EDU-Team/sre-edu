@@ -124,7 +124,8 @@ const config: Config = {
             require.resolve('docusaurus-lunr-search'), {
                 languages: ['ru', 'en']
             }
-        ]
+        ],
+        'docusaurus-plugin-sass'
     ]
 }
 

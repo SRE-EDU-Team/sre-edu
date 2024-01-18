@@ -33,7 +33,7 @@ module.exports = {
         "@typescript-eslint/indent": ["warn", 4],
         "simple-import-sort/imports": "warn",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-no-literals": ["warn", {"noStrings": true, "noAttributeStrings": true}],
+        // "react/jsx-no-literals": ["warn", {"noStrings": false, "noAttributeStrings": true}],
         "jsx-quotes": ["warn", "prefer-single"]
     }
 }

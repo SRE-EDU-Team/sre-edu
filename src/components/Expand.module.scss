@@ -1,0 +1,48 @@
+.c {
+    margin-bottom: var(--ifm-leading);
+    padding: 0;
+    border-radius: var(--ifm-alert-border-radius);
+    padding: var(--ifm-alert-padding-vertical) var(--ifm-alert-padding-horizontal);
+
+    > div:first-child {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding-bottom: var(--ifm-spacing-vertical);
+        gap: var(--ifm-spacing-horizontal);
+
+        > div:first-child {
+            font-weight: bold;
+        }
+    }
+
+    > div:nth-child(2) {
+        overflow-y: hidden;
+        transition: height var(--ifm-transition-fast) linear;
+    }
+
+    > div:nth-child(3) {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: var(--ifm-spacing-vertical);
+        gap: var(--ifm-spacing-horizontal);
+    }
+
+    :global .menu__caret {
+        padding: 0;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &:before {
+            transform: rotate(90deg);
+        }
+
+        &.expand:before {
+            transform: rotate(180deg);
+        }
+    }
+}
