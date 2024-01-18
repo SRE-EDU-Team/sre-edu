@@ -3,7 +3,7 @@ import { type PropsWithChildren, type ReactElement, useEffect, useRef } from 're
 import Reveal from 'reveal.js'
 import RevealNotes from 'reveal.js/plugin/notes/notes'
 
-export function RevealSlides ({ children }: PropsWithChildren): ReactElement {
+function RevealSlidesInner ({ children }: PropsWithChildren): ReactElement {
     const ref = useRef(null)
 
     useEffect(() => {
@@ -17,15 +17,17 @@ export function RevealSlides ({ children }: PropsWithChildren): ReactElement {
         return () => { r.destroy() }
     }, [ref])
 
-    return <BrowserOnly>
-        {() => {
-            return <div className={'w-full h-80 not-prose'}>
-                <div ref={ref} className={'reveal'}>
-                    <div className={'slides'}>
-                        {children}
-                    </div>
-                </div>
+    return <div className={'w-full h-80 not-prose'}>
+        <div ref={ref} className={'reveal'}>
+            <div className={'slides'}>
+                {children}
             </div>
-        }}
+        </div>
+    </div>
+}
+
+export function RevealSlides ({ children }: PropsWithChildren): ReactElement {
+    return <BrowserOnly>
+        {() => <RevealSlidesInner>{ children }</RevealSlidesInner>}
     </BrowserOnly>
 }
