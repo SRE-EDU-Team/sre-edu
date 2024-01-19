@@ -41,6 +41,13 @@
   @apply prose-invert;
 }
 
+.markdown th:first-child,
+.markdown td:first-child,
+.markdown th:last-child,
+.markdown td:last-child {
+  @apply p-2;
+}
+
 a {
   color: var(--ifm-link-color);
   text-decoration: var(--ifm-link-decoration);
