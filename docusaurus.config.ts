@@ -114,6 +114,20 @@ const config: Config = {
                 name: 'docusaurus-tailwindcss',
                 configurePostCss (postcssOptions: PostCssOptions) {
                 // Appends TailwindCSS and AutoPrefixer.
+                    postcssOptions.plugins.push(
+                        {
+                            postcssPlugin: 'filter-out-some-infima-styles',
+                            Once (root: any) {
+                                if (root.source.input.from.endsWith('infima/dist/css/default/default.css') as boolean) {
+                                    root.nodes.forEach((n: any) => {
+                                        if (n.type === 'rule' && n.selector.startsWith('.markdown') as boolean) {
+                                            n.remove()
+                                        }
+                                    })
+                                }
+                            }
+                        }
+                    )
                     postcssOptions.plugins.push(tailwindcss)
                     postcssOptions.plugins.push(autoprefixer)
                     return postcssOptions

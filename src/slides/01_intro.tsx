@@ -1,7 +1,7 @@
 import wonderWorldImg from '@site/static/img/wonder-world.jpeg'
 import { type ReactElement } from 'react'
 
-import { BulletsSlide, ImageSlide, RevealSlides, type RevealSlidesProps, TitleSlide } from '../components/reveal'
+import { BulletsSlide, ImageSlide, RevealSlides, type RevealSlidesProps, TitleLeftSlide, TitleSlide, TwoPanelsSlide } from '../components/reveal'
 import deepwaterHorizonQrcode from './01_intro/deepwater_horizon_qrcode.png'
 import screenshot01 from './01_intro/postmortems/screenshot-01.jpeg'
 
@@ -9,12 +9,17 @@ export function IntroSlides ({ embedded }: RevealSlidesProps): ReactElement {
     return <RevealSlides embedded={embedded}>
         <section>
             <TitleSlide title='Надежность информационных систем' subtitle='Лекции' />
-            <BulletsSlide title='Зачем это изучать?'>
+            <BulletsSlide title='Зачем это изучать?' left>
                 <li>Если <em>не</em> работать в ИТ?</li>
                 <li>Если работать в ИТ?</li>
             </BulletsSlide>
             <ImageSlide src={wonderWorldImg} />
         </section>
+        <TitleLeftSlide title='Лекция 01' subtitle='О сбоях'>
+            <div className='text-left'>
+                На этой лекции рассмотрим сбои в ИТ и не в ИТ, чтобы понимать о чем вообще пойдет речь и чем будем заниматься
+            </div>
+        </TitleLeftSlide>
         <section>
             <TitleSlide title='Сбои' subtitle='Сбои бывают не только в ИТ' />
             <TitleSlide title='Катастрофа шаттла «Челленджер»'>
@@ -33,23 +38,19 @@ export function IntroSlides ({ embedded }: RevealSlidesProps): ReactElement {
                         src='https://upload.wikimedia.org/wikipedia/commons/9/9d/Deepwater_Horizon_offshore_drilling_unit_on_fire_2010.jpg' />
                 </div>
             </TitleSlide>
-            <section>
-                <div className={'flex'}>
-                    <div className='grow basis-0'>
-                        <p>Фильм по мотивам:</p>
-                        <p>
-                            <a href='https://www.kinopoisk.ru/film/607737/'>«Глубоководный горизонт»</a><br />
+            <TwoPanelsSlide>
+                <>
+                    <p>Фильм по мотивам:</p>
+                    <p>
+                        <a href='https://www.kinopoisk.ru/film/607737/'>«Глубоководный горизонт»</a><br />
                                 Deepwater Horizon
-                        </p>
-                        <p>2016</p>
-                        <img width='250' className='mx-auto' src={deepwaterHorizonQrcode} />
-                    </div>
-                    <div className='grow basis-0'>
-                        <img width='350' className='mx-auto'
-                            src='https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/7d48bcd9-e52a-4b39-8549-19f9ec2947a0/1920x' />
-                    </div>
-                </div>
-            </section>
+                    </p>
+                    <p>2016</p>
+                    <img width='250' className='mx-auto' src={deepwaterHorizonQrcode} />
+                </>
+                <img width='350' className='mx-auto'
+                    src='https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/7d48bcd9-e52a-4b39-8549-19f9ec2947a0/1920x' />
+            </TwoPanelsSlide>
             <TitleSlide title='Авария на Чернобыльской АЭС'>
                 <img className='mx-auto' width='400' src='https://upload.wikimedia.org/wikipedia/ru/1/1b/Chernobyl_Disaster.jpg' />
             </TitleSlide>
@@ -79,24 +80,21 @@ export function IntroSlides ({ embedded }: RevealSlidesProps): ReactElement {
                     </div>
                 </div>
             </section>
-            <section>
-                <h1>Причины</h1>
-                <ul>
-                    <li className={'fragment'}>Сначала думали, что дело в «историях» — потеряли время</li>
-                    <li className={'fragment'}>Оказалось, что добавили новый продукт, но заполнили не все поля</li>
-                    <li className={'fragment'}>Продукты добавлялись простым редактированием JSON</li>
-                    <li className={'fragment'}>Не было валидации на сервере</li>
-                    <li className={'fragment'}>Не было валидации на клиенте (мобильное приложение)</li>
-                    <li className={'fragment'}>Мобильное приложение Android не отображало все продукты, а не только
+            <BulletsSlide title='Причины'>
+                <li className={'fragment'}>Сначала думали, что дело в «историях» — потеряли время</li>
+                <li className={'fragment'}>Оказалось, что добавили новый продукт, но заполнили не все поля</li>
+                <li className={'fragment'}>Продукты добавлялись простым редактированием JSON</li>
+                <li className={'fragment'}>Не было валидации на сервере</li>
+                <li className={'fragment'}>Не было валидации на клиенте (мобильное приложение)</li>
+                <li className={'fragment'}>Мобильное приложение Android не отображало все продукты, а не только
                             один
                             невалидный</li>
-                    <li className={'fragment'}>Мобильные приложения кешировали список продуктов на сутки</li>
-                    <li className={'fragment'}>Возможность принудительного сброса кеша не была предусмотрена</li>
-                    <li className={'fragment'}>Возможность массовой коммуникации с пользователями не была
+                <li className={'fragment'}>Мобильные приложения кешировали список продуктов на сутки</li>
+                <li className={'fragment'}>Возможность принудительного сброса кеша не была предусмотрена</li>
+                <li className={'fragment'}>Возможность массовой коммуникации с пользователями не была
                             предусмотрена
-                    </li>
-                </ul>
-            </section>
+                </li>
+            </BulletsSlide>
             <section>
                 <h1>Выводы</h1>
                 <ul>

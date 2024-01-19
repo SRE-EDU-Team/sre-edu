@@ -1,5 +1,5 @@
 .reveal {
-  @apply text-black;
+  @apply text-black text-3xl;
 }
 
 [data-theme="dark"] .reveal {
