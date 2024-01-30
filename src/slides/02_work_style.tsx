@@ -1,16 +1,10 @@
 import { type ReactElement } from 'react'
 
-import { RevealSlides, type RevealSlidesProps } from '../components/reveal'
+import { IntroSlide, RevealSlides, type RevealSlidesProps } from '../components/reveal'
 
 export function WorkStyleSlides ({ embedded }: RevealSlidesProps): ReactElement {
     return <RevealSlides embedded={embedded}>
-        <section>
-            <h1>Работа в режиме сложности, срочности и неопределенности</h1>
-            <p>
-                <i className='fa-regular fa-copyright'></i>
-                    Дмитрий Масленников, «Тинькофф»
-            </p>
-        </section>
+        <IntroSlide title='Работа в режиме сложности, срочности и неопределенности' />
         <section>
             <section>
                 <h1>Структура современного ИТ решения</h1>

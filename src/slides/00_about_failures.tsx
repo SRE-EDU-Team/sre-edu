@@ -1,14 +1,14 @@
 import wonderWorldImg from '@site/static/img/wonder-world.jpeg'
 import { type ReactElement } from 'react'
 
-import { BulletsSlide, ImageSlide, RevealSlides, type RevealSlidesProps, TitleLeftSlide, TitleSlide, TwoPanelsSlide } from '../components/reveal'
+import { BulletsSlide, ImageSlide, IntroSlide, RevealSlides, type RevealSlidesProps, TitleLeftSlide, TitleSlide, TwoPanelsSlide } from '../components/reveal'
 import deepwaterHorizonQrcode from './00_about_failures/deepwater_horizon_qrcode.png'
 import screenshot01 from './00_about_failures/postmortems/screenshot-01.jpeg'
 
 export function AboutFailuresSlides ({ embedded }: RevealSlidesProps): ReactElement {
     return <RevealSlides embedded={embedded}>
         <section>
-            <TitleSlide title='Надежность информационных систем' subtitle='Лекции' />
+            <IntroSlide title='Надежность информационных систем'/>
             <BulletsSlide title='Зачем это изучать?' left>
                 <li>Если <em>не</em> работать в ИТ?</li>
                 <li>Если работать в ИТ?</li>

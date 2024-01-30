@@ -1,16 +1,10 @@
 import { type ReactElement } from 'react'
 
-import { RevealSlides, type RevealSlidesProps } from '../components/reveal'
+import { IntroSlide, RevealSlides, type RevealSlidesProps } from '../components/reveal'
 
 export function FailureSourcesSlides ({ embedded }: RevealSlidesProps): ReactElement {
     return <RevealSlides embedded={embedded}>
-        <section>
-            <h1>Источники сбоев</h1>
-            <p>
-                <i className='fa-regular fa-copyright'></i>
-                    Дмитрий Масленников, «Тинькофф»
-            </p>
-        </section>
+        <IntroSlide title='Источники сбоев'/>
         <section>
             <section>
                 <h1>Общие рассуждения</h1>

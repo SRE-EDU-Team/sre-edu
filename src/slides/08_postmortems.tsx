@@ -1,16 +1,10 @@
 import { type ReactElement } from 'react'
 
-import { RevealSlides, type RevealSlidesProps } from '../components/reveal'
+import { IntroSlide, RevealSlides, type RevealSlidesProps } from '../components/reveal'
 
 export function PostmortemsSlides ({ embedded }: RevealSlidesProps): ReactElement {
     return <RevealSlides embedded={embedded}>
-        <section>
-            <h1>Постмортемы</h1>
-            <p>
-                <i className='fa-regular fa-copyright'></i>
-                    Дмитрий Масленников, «Тинькофф»
-            </p>
-        </section>
+        <IntroSlide title='Постмортемы'/>
         <section>
             <section>
                 <h1>После сбоя</h1>

@@ -1,17 +1,10 @@
 import { type ReactElement } from 'react'
 
-import { RevealSlides, type RevealSlidesProps } from '../components/reveal'
+import { IntroSlide, RevealSlides, type RevealSlidesProps } from '../components/reveal'
 
 export function SafeArchSlides ({ embedded }: RevealSlidesProps): ReactElement {
     return <RevealSlides embedded={embedded}>
-
-        <section>
-            <h1>Про отказоустойчивые архитектуры</h1>
-            <p>
-                <i className='fa-regular fa-copyright'></i>
-                    Дмитрий Масленников, «Тинькофф»
-            </p>
-        </section>
+        <IntroSlide title='Про отказоустойчивые архитектуры'/>
         {/*
     - CAP
     - Consistency (Every read receives the most recent write or an error.)

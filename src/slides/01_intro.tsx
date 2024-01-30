@@ -1,12 +1,10 @@
 import { type ReactElement } from 'react'
 
-import { RevealSlides, type RevealSlidesProps } from '../components/reveal'
+import { IntroSlide, RevealSlides, type RevealSlidesProps } from '../components/reveal'
 
 export function IntroSlides ({ embedded }: RevealSlidesProps): ReactElement {
     return <RevealSlides embedded={embedded}>
-        <section>
-            <h1>Введение</h1>
-        </section>
+        <IntroSlide title='Введение' />
         <section>
             <section>
                 <h1>Почему мы уделяем столько внимания эксплуатации сервисов?</h1>

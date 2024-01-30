@@ -3,6 +3,8 @@ import { type PropsWithChildren, type ReactElement, useEffect, useRef } from 're
 import Reveal from 'reveal.js'
 import RevealNotes from 'reveal.js/plugin/notes/notes'
 
+import LogoSvg from '../../static/img/logo.svg'
+
 interface TitleSlideProps {
     title: string
     subtitle?: string
@@ -63,6 +65,16 @@ export function TitleLeftSlide ({ title, subtitle, children }: PropsWithChildren
             {children}
         </>
     </TwoPanelsSlide>
+}
+
+interface IntroSlidePros {
+    title: string
+}
+
+export function IntroSlide ({ title }: IntroSlidePros): ReactElement {
+    return <TitleLeftSlide title={title} subtitle='Лекция'>
+        <LogoSvg />
+    </TitleLeftSlide>
 }
 
 interface BulletsSlideProps {
