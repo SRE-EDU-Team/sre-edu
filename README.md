@@ -1,41 +1,20 @@
-# Website
+# Курс по надежности информационных систем
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Материалы используются для ведения курсов и публикуются на [GitHub Pages](https://sre-edu-team.github.io/sre-edu/).
 
-### Installation
+Ведется попытка собрать исчерпывающий курс по надежности информационных систем и предоставить все материалы для самостоятельного изучения и ведения данного курса (конспекты, слайды, видеозаписи с лекциями и т.д.)
 
-```
-$ yarn
-```
+# Как помочь в разработке
 
-### Local Development
+Мы с удовольстием примем ваши материалы.
 
-```
-$ yarn start
-```
+Сайт разрабатывается с помощью [Docusaurus](https://docusaurus.io/).
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Для локального запуска необходимо поставить [NodeJS и npm](https://nodejs.org/en). Далее используйте следующие команды:
 
-### Build
-
-```
-$ yarn build
+```console
+# npm install
+# npm start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Для слайдов используется [reveal.js](https://revealjs.com/).
