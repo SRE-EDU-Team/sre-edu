@@ -1339,6 +1339,7 @@ rpi_voltage{component="sdram_p"} 1.1
                 <h1>Пример дашборда на метриках</h1>
                 <h2>Grafana</h2>
                 <img className='w-9/12' src='imgs/Grafana.png' />
+                <img width='800' src='static/img/dashboard.jpeg'/>
             </section>
             <section>
                 <h1>Кардинальность метрик</h1>
