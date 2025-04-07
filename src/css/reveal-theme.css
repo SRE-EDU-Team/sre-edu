@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 .reveal {
   @apply text-black text-3xl;
 }

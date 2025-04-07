@@ -2,7 +2,7 @@ import type * as Preset from '@docusaurus/preset-classic'
 import type { Config, PostCssOptions } from '@docusaurus/types'
 import autoprefixer from 'autoprefixer'
 import { themes as prismThemes } from 'prism-react-renderer'
-import tailwindcss from 'tailwindcss'
+import tailwindcss from '@tailwindcss/postcss'
 
 const config: Config = {
     title: 'Учебные материалы по SRE',

@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -38,8 +41,8 @@
 }
 
 [data-theme="dark"] .markdown {
-  @apply prose-invert;
-}
+    @apply prose-invert;
+}  
 
 .markdown th:first-child,
 .markdown td:first-child,
